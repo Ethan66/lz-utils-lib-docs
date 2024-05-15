@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as l,N as n}from"./chunks/framework.27c7f8b4.js";const h=JSON.parse('{"title":"快速上手","description":"","frontmatter":{},"headers":[],"relativePath":"docs/install.md","lastUpdated":1688636077000}'),e={name:"docs/install.md"},o=n("",18),p=[o];function t(r,c,i,D,y,C){return a(),l("div",null,p)}const F=s(e,[["render",t]]);export{h as __pageData,F as default};
