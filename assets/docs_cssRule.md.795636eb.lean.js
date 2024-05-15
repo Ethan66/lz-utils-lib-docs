@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as l,N as n}from"./chunks/framework.79b88b02.js";const A=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/cssRule.md","lastUpdated":1685505206000}'),p={name:"docs/cssRule.md"},o=n("",26),e=[o];function c(t,r,F,y,D,i){return a(),l("div",null,e)}const d=s(p,[["render",c]]);export{A as __pageData,d as default};

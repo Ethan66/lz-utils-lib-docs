@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,N as l}from"./chunks/framework.27c7f8b4.js";const y=JSON.parse('{"title":"代码规范","description":"","frontmatter":{},"headers":[],"relativePath":"docs/codeRule.md","lastUpdated":1685501721000}'),e={name:"docs/codeRule.md"},p=l("",30),t=[p];function o(c,i,r,C,A,d){return a(),n("div",null,t)}const u=s(e,[["render",o]]);export{y as __pageData,u as default};

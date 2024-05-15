@@ -1,0 +1,1 @@
+import{_ as n,o as s,c as a,N as t}from"./chunks/framework.79b88b02.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/YIJIE.md","lastUpdated":1690947822000}'),p={name:"docs/YIJIE.md"},o=t("",3),e=[o];function c(l,u,k,r,i,d){return s(),a("div",null,e)}const _=n(p,[["render",c]]);export{m as __pageData,_ as default};
