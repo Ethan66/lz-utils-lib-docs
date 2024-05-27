@@ -219,7 +219,6 @@ import{_ as n,o as s,c as a,N as p}from"./chunks/framework.79b88b02.js";const D=
     <span class="token function-variable function">clear</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token function">clearTimeout</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span>
-            <span class="token keyword">this</span><span class="token punctuation">.</span>seconds <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>init_seconds
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
     <span class="token function-variable function">start</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
@@ -230,6 +229,9 @@ import{_ as n,o as s,c as a,N as p}from"./chunks/framework.79b88b02.js";const D=
     <span class="token function-variable function">pause</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>isPaused <span class="token operator">=</span> <span class="token boolean">true</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function-variable function">reset</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>seconds <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>init_seconds
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><p>methods/countDown</p></div><h2 id="比较版本号" tabindex="-1">比较版本号 <a class="header-anchor" href="#比较版本号" aria-label="Permalink to &quot;比较版本号&quot;">​</a></h2><p>方法名：<code>compareVersion</code></p><div class="language-ts"><pre><code><span class="token comment">/**
