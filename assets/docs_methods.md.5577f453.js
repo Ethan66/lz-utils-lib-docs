@@ -177,7 +177,30 @@ import{_ as n,o as s,c as a,N as p}from"./chunks/framework.79b88b02.js";const D=
   document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> download</code></pre><p>methods/download</p></div><h2 id="获取倒计时时间" tabindex="-1">获取倒计时时间 <a class="header-anchor" href="#获取倒计时时间" aria-label="Permalink to &quot;获取倒计时时间&quot;">​</a></h2><p>类名：<code>new CountDown(second, type)</code><br> 第一个参数: <code>倒计时秒数</code><br> 第二个参数: 表示返回类型：<code>1：00:00:60，2：0天00时00分60秒，3：60</code><br></p><p>使用说明：<br> const cd = <code>new CountDown(60, 1 | 2 | 3)</code><br><code>cd.start()</code> //启动倒计时<br><code>cd.pause()</code> //暂停倒计时<br><code>cd.clear()</code> //清除倒计时<br><code>cd.time</code> // 当前倒计时时间 场景：短信验证码倒计时、页面时间倒计时</p><div class="language-ts"><pre><code><span class="token keyword">import</span> formatSeconds <span class="token keyword">from</span> <span class="token string">&#39;../handleData/formatSeconds&#39;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> download</code></pre><p>methods/download</p></div><h2 id="settimeout实现setinterval" tabindex="-1">setTimeout实现setInterval <a class="header-anchor" href="#settimeout实现setinterval" aria-label="Permalink to &quot;setTimeout实现setInterval&quot;">​</a></h2><p>方法名：<code>interval</code></p><p>场景：原生setInterval有漏洞，所以用setTimeout替换，使用方法一样 参数解释：<br> callback: <code>回调函数</code><br> time: <code>毫秒数</code><br></p><div class="language-ts"><pre><code><span class="token comment">/**
+ * setTimeout实现setInterval
+ * @param callback 回调函数
+ * @param wait 等待时间
+ * @returns timerId
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">interval</span><span class="token punctuation">(</span>callback<span class="token punctuation">,</span> wait<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token number">NaN</span>
+  <span class="token keyword">var</span> init <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> <span class="token function-variable function">fn</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    n<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> now <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> diff <span class="token operator">=</span> now <span class="token operator">-</span> init <span class="token operator">-</span> n <span class="token operator">*</span> wait<span class="token punctuation">;</span> <span class="token comment">// 获取差值</span>
+    timer <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> wait <span class="token operator">-</span> diff<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置实际wait</span>
+    <span class="token function">callback</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  timer <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> wait<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> timer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> interval<span class="token punctuation">;</span>
+</code></pre><p>methods/interval</p></div><h2 id="获取倒计时时间" tabindex="-1">获取倒计时时间 <a class="header-anchor" href="#获取倒计时时间" aria-label="Permalink to &quot;获取倒计时时间&quot;">​</a></h2><p>类名：<code>new CountDown(second, type)</code><br> 第一个参数: <code>倒计时秒数</code><br> 第二个参数: 表示返回类型：<code>1：00:00:60，2：0天00时00分60秒，3：60</code><br></p><p>使用说明：<br> const cd = <code>new CountDown(60, 1 | 2 | 3)</code><br><code>cd.start()</code> //启动倒计时<br><code>cd.pause()</code> //暂停倒计时<br><code>cd.clear()</code> //清除倒计时<br><code>cd.time</code> // 当前倒计时时间 场景：短信验证码倒计时、页面时间倒计时</p><div class="language-ts"><pre><code><span class="token keyword">import</span> formatSeconds <span class="token keyword">from</span> <span class="token string">&#39;../handleData/formatSeconds&#39;</span>
 
 <span class="token comment">/**
  * @name 获取倒计时时间
@@ -252,4 +275,4 @@ import{_ as n,o as s,c as a,N as p}from"./chunks/framework.79b88b02.js";const D=
   <span class="token punctuation">}</span>
   <span class="token keyword">return</span> <span class="token number">0</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">export</span> <span class="token keyword">default</span> compareVersion</code></pre><p>methods/compareVersion</p></div>`,26),e=[o];function c(l,u,i,r,k,y){return s(),a("div",null,e)}const F=n(t,[["render",c]]);export{D as __pageData,F as default};
+<span class="token keyword">export</span> <span class="token keyword">default</span> compareVersion</code></pre><p>methods/compareVersion</p></div>`,30),e=[o];function c(l,u,i,r,k,y){return s(),a("div",null,e)}const F=n(t,[["render",c]]);export{D as __pageData,F as default};

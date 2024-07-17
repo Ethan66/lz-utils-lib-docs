@@ -48,7 +48,7 @@ import{_ as n,o as s,c as a,N as t}from"./chunks/framework.79b88b02.js";const g=
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> formatOptions
-</code></pre><p>handleData/formatOptions</p></div><h2 id="日期时间格式化" tabindex="-1">日期时间格式化 <a class="header-anchor" href="#日期时间格式化" aria-label="Permalink to &quot;日期时间格式化&quot;">​</a></h2><p>方法名：<code>formatTime</code><br> 场景：将时间戳转化为一定格式的字符串 time 值: <code>时间戳、日期时间字符串、Date</code></p><p>fmt 值: <code>YYYY-MM-DD HH:mm:ss</code>、<code>HH:mm:ss</code></p><div class="language-ts"><pre><code><span class="token comment">/**
+</code></pre><p>handleData/formatOptions</p></div><h2 id="日期时间格式化" tabindex="-1">日期时间格式化 <a class="header-anchor" href="#日期时间格式化" aria-label="Permalink to &quot;日期时间格式化&quot;">​</a></h2><p>方法名：<code>formatTime</code><br> 场景：将时间戳转化为一定格式的字符串 参数解释：<br> time 值: <code>时间戳、日期时间字符串、Date</code><br></p><p>fmt 值: <code>YYYY-MM-DD HH:mm:ss</code>、<code>HH:mm:ss</code><br></p><div class="language-ts"><pre><code><span class="token comment">/**
  * @name 日期时间格式化
  * @param {String|Number|Date} time 时间戳
  * @param {String} fmt 格式化类型
@@ -122,7 +122,7 @@ import{_ as n,o as s,c as a,N as t}from"./chunks/framework.79b88b02.js";const g=
     <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 
-  <span class="token keyword">export</span> <span class="token keyword">default</span> formatValidObj</code></pre><p>handleData/formatValidObj</p></div><h2 id="秒数格式化" tabindex="-1">秒数格式化 <a class="header-anchor" href="#秒数格式化" aria-label="Permalink to &quot;秒数格式化&quot;">​</a></h2><p>方法名：<code>formatSeconds</code><br> 场景：将时间戳转化为一定格式的字符串</p><div class="language-ts"><pre><code><span class="token comment">/**
+  <span class="token keyword">export</span> <span class="token keyword">default</span> formatValidObj</code></pre><p>handleData/formatValidObj</p></div><h2 id="秒数格式化" tabindex="-1">秒数格式化 <a class="header-anchor" href="#秒数格式化" aria-label="Permalink to &quot;秒数格式化&quot;">​</a></h2><p>方法名：<code>formatSeconds</code><br> 场景：将秒数转化为其他格式 参数解释：<br> seconds: <code>秒数</code><br> type: <code>1：00:00:60，2：0天00时00分60秒，3：60</code><br> formatSeconds(&#39;100&#39;, 2)</p><div class="language-ts"><pre><code><span class="token comment">/**
  * @name 日期时间格式化
  * @param {number} seconds 倒计时秒数
  * @param {1 | 2 | 3} type 格式化类型：1：00:00:60，2：0天00时00分60秒，3：60
@@ -180,4 +180,4 @@ import{_ as n,o as s,c as a,N as t}from"./chunks/framework.79b88b02.js";const g=
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">await</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><p>handleData/formatPassTime</p></div>`,24),e=[o];function c(u,l,k,i,r,d){return s(),a("div",null,e)}const f=n(p,[["render",c]]);export{g as __pageData,f as default};
+</code></pre><p>handleData/formatPassTime</p></div>`,24),e=[o];function c(u,l,k,i,r,d){return s(),a("div",null,e)}const b=n(p,[["render",c]]);export{g as __pageData,b as default};
