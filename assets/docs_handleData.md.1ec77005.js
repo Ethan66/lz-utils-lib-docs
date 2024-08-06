@@ -1,4 +1,4 @@
-import{_ as n,o as s,c as a,N as t}from"./chunks/framework.79b88b02.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/handleData.md","lastUpdated":1721205828000}'),p={name:"docs/handleData.md"},o=t(`<h2 id="获取有效的数字" tabindex="-1">获取有效的数字 <a class="header-anchor" href="#获取有效的数字" aria-label="Permalink to &quot;获取有效的数字&quot;">​</a></h2><p>方法名：<code>formatValidNumber</code><br> 场景：输入框时候必须要输入数字</p><div class="language-ts"><pre><code><span class="token comment">/**
+import{_ as n,o as s,c as a,N as t}from"./chunks/framework.79b88b02.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/handleData.md","lastUpdated":1721620273000}'),p={name:"docs/handleData.md"},o=t(`<h2 id="获取有效的数字" tabindex="-1">获取有效的数字 <a class="header-anchor" href="#获取有效的数字" aria-label="Permalink to &quot;获取有效的数字&quot;">​</a></h2><p>方法名：<code>formatValidNumber</code><br> 场景：输入框时候必须要输入数字</p><div class="language-ts"><pre><code><span class="token comment">/**
  *@title 获取有效的数字
  * @param {string | number} number URL路径
  * @returns {string}
